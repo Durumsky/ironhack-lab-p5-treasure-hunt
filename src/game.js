@@ -13,15 +13,14 @@ class Player {
   moveRight() {}
 
   draw() {
-    image(this.playerImage, 100, 100, 100, 100);
-    console.log("where is the guy");
+    image(game.playerImage, 100, 100, 100, 100);
+    
   }
 }
 
 class Game {
   constructor() {
     this.player = new Player(10, 10);
-    console.log(player);
   }
 
   drawGrid() {
@@ -38,7 +37,7 @@ class Game {
   }
 
   preload() {
-    this.playerImage = loadImage("/assets/character-down.png");
+    this.playerImage = loadImage("assets/character-down.png");
   }
   draw() {
     this.player.draw();
